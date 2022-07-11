@@ -3544,11 +3544,6 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.0.tgz#4ddcac3718d787cf9df0d1b7d15033925c8f29f2"
   integrity sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==
 
-ctx-polyfill@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/ctx-polyfill/-/ctx-polyfill-1.1.4.tgz#08420bc5c540d08ac36d05720ca503c65e302d65"
-  integrity sha512-tz65F3/zmZ2+CMtn4MhNhYi/yIN9dKnItMKzSkH2GE6dBpAIbUR0K5pSHWqUL3OuNBCA70DKlWZYUClHfydIXg==
-
 dag-map@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/dag-map/-/dag-map-1.0.2.tgz#e8379f041000ed561fc515475c1ed2c85eece8d7"
@@ -6391,13 +6386,6 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-canvas@^0.1.38:
-  version "0.1.38"
-  resolved "https://registry.yarnpkg.com/react-native-canvas/-/react-native-canvas-0.1.38.tgz#d2d76f1a105cd4711792271f265b72bd5699acf0"
-  integrity sha512-DjtN921PKoa2liYF8hKq1263xg2o47Bj/1E/+l75GPicT2RV/x/Y1HBrLvFVCR3OO+UslXEC5BtRjfxDoh/Bug==
-  dependencies:
-    ctx-polyfill "^1.1.4"
-
 react-native-codegen@^0.0.17:
   version "0.0.17"
   resolved "https://registry.yarnpkg.com/react-native-codegen/-/react-native-codegen-0.0.17.tgz#83fb814d94061cbd46667f510d2ddba35ffb50ac"
@@ -6452,10 +6440,10 @@ react-native-web@0.17.7:
     normalize-css-color "^1.0.2"
     prop-types "^15.6.0"
 
-react-native-webview@^11.22.5:
-  version "11.22.5"
-  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.22.5.tgz#8f661bf6945f1ac7173e06e642712a5c6eaf802e"
-  integrity sha512-UtFvzJEdlRB3fdXnU14CjHVr11urKc/GqRGEQGWttBNNT5bjcrmEQ98OAq/xIOcKuZZWpJlXjQibJmgpM7b1zQ==
+react-native-webview@11.18.1:
+  version "11.18.1"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.18.1.tgz#0a1893abd391c8f0e7d4c5874bfa737ca6311225"
+  integrity sha512-1VoVmkbsHJ44WA+frMhNfua64t0u2jq80h25sUWrKJRiYrO0XIsKBnJcqrzuOH1ZAT/zDHTqBB5OU+bxEHLJmQ==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"

@@ -1,8 +1,14 @@
 let tamanho_do_mapa = 100
 let raio_teia = 2
+import { Dimensions } from 'react-native';
 
-function generate_int(max) {
-    return Math.floor(Math.random() * (max - (max * -1) + 1)) + (max * -1);
+const { width, height } = Dimensions.get('window');
+
+function generate_intH(max) {
+    return Math.floor((Math.random() * (height - 100)));
+}
+function generate_intW(max) {
+    return Math.floor((Math.random() * (width - 80)));
 }
 
 function calculate_distance(pos1, pos2) {
@@ -10,16 +16,16 @@ function calculate_distance(pos1, pos2) {
     return Math.sqrt((pos1[0] - pos2[0]) ** 2 + (pos1[1] - pos2[1]) ** 2)
 }
 
-function generate_city(square_size) {
+export function generate_city(square_size) {
     // Cordenadas {X,Y}
     var pos = []
     for (let i = 0; i < square_size; i++) {
-        pos.push([generate_int(square_size), generate_int(square_size)])
+        pos.push([generate_intW(square_size), generate_intH(square_size)])
     }
     return pos
 }
 
-function Gerar_grafo(build_pos, range_cobweb) {
+export function Gerar_grafo(build_pos, range_cobweb) {
     const size = build_pos.length
     var graph = new Array(size)
     // Zerar matriz de adjacencia 
@@ -39,8 +45,8 @@ function Gerar_grafo(build_pos, range_cobweb) {
 
     return graph
 }
-var city = generate_city(5)
+var city = generate_city(9)
 console.log("Cordenadas das cidades")
-console.table(city)
+console.log(city)
 console.log("Distancia entre predios")
-console.table(Gerar_grafo(city, 3))
+console.log(Gerar_grafo(city, 3))
