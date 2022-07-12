@@ -1,19 +1,9 @@
-let tamanho_do_mapa = 500
-let raio_teia = 55
-let destido = 6
-let origem = 0
-const cidade_exemplo = [
-    [4, 5], [2, -10],
-    [-6, 0], [9, 3],
-    [8, 4], [1, 2],
-    [9, 1], [8, -6],
-    [-6, 2], [-2, 7]
-]
+import { Dimensions } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
 function generate_intH(max) {
-    return Math.floor((Math.random() * (height - 100)));
+    return Math.floor((Math.random() * (height - 200)));
 }
 function generate_intW(max) {
     return Math.floor((Math.random() * (width - 80)));
@@ -53,11 +43,11 @@ export function Gerar_grafo(build_pos, range_cobweb) {
             }
         }
     }
-
+    
     return graph
 }
 
-function Dijask(initial_index, final_index, graph) {
+export function Dijask(initial_index, final_index, graph) {
     var priorityquery = []
     var visited = []
     var set = new Array(graph.length)
@@ -97,15 +87,4 @@ function Dijask(initial_index, final_index, graph) {
         return false
     }
     return set
-}
-
-city = generate_city(tamanho_do_mapa)
-graph = Gerar_grafo(city, raio_teia)
-saida = Dijask(origem, destido, graph)
-if (saida == false) {
-    console.log("Não foi possível encontrar o caminho")
-}
-else {
-    console.log("Caminho encontrado")
-    console.table(Dijask(origem, destido, graph))
 }
