@@ -1,16 +1,13 @@
-import React, {useState, useRef} from 'react';
-import { SafeAreaView, View, TouchableOpacity, ScrollView, Text } from 'react-native';
-import { NativeBaseProvider, Center, HStack, Box } from 'native-base';
+import React, {useState} from 'react';
+import { View, TouchableOpacity, ScrollView, Text } from 'react-native';
+import { NativeBaseProvider, Center } from 'native-base';
 import Svg, { G, Line, Circle} from 'react-native-svg';
 import Escala from './dimensions';
 import { generate_city, Gerar_grafo, Dijask } from './GenerateMap';
-import Images from "./imgs"
-
-
 
 let predios = generate_city(9);
 let grafo = Gerar_grafo(predios, 120)
-const resultDijask = Dijask(0, 4, grafo)
+let resultDijask = Dijask(0, 2, grafo)
 
 export default function App() {
   
@@ -47,27 +44,35 @@ export default function App() {
       setArrayCaminho(copy);
     }
   }
-  console.log(arrayCaminho)
 
   const validaCaminho = () => {
+  
     if(resultDijask != false) {
-      console.log(resultDijask)
-      let element = resultDijask[4][1];
-      let index = arrayCaminho.length;
-      while (element != null) {
-          if(element == arrayCaminho) {
-            element = resultDijask[arrayCaminho[index]][1]
-            index--;
+      // console.log(resultDijask)
+      // console.log(arrayCaminho)
+      let element = resultDijask[2][1];
+      let array = [...arrayCaminho]
+      array.pop();
+      while (array.length > 0 ) {
+        console.log(element)
+        if(array[array.length] == 0) {
+          setResposta(true)
+          break
+        }
+          if(element == array[array.length]) {
+            element = resultDijask[array[array.length]][1]
+            array.pop()
           }
           else {
             setResposta(false)
-            break;
+            break
           }
       }
+      if(array.length <= 1) setResposta(true);
     }
     else {
-      arrayCaminho == resultDijask
-      setResposta(true)
+      if(arrayCaminho == resultDijask) setResposta(true)
+      else setResposta(false);
     }
 
   }
@@ -86,9 +91,10 @@ export default function App() {
     setContador(0);
     setResposta(null);
     predios = generate_city(9);
-    grafo = Gerar_grafo(predios, 120) 
+    grafo = Gerar_grafo(predios, 120)
+    resultDijask = Dijask(0, 2, grafo)
   }
-  console.log(resposta)
+
   return (
     <NativeBaseProvider>
       <View style={{height: '100%', backgroundColor:"#023047"}}>
