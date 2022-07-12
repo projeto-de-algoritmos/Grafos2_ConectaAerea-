@@ -17,9 +17,17 @@ O algoritmo faz a validação utilizando Dijkstra.
 A apresentação do projeto se encontra [Aqui](/Apresentacao.mp4)
 
 ## Screenshots
+Entre no jogo. Os bolinhas e as restas correspondem os caminhos possíveis de uma cor a outra
 
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Screenshot_1](imgs/Screenshot_1.png)
 
+Clique nas opções acima para percorrer o menor de caminho da bola rosa até a bola verda
+
+![Screenshot_2](imgs/Screenshot_2.png)
+
+Em seguida arreste para o lado e submeta para ver o resultado
+
+![Screenshot_3](imgs/Screenshot_3.png)
 ## Instalação
 
 **Linguagem**: JavaScrypt<br>
