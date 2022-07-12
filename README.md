@@ -1,45 +1,36 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
 # NomedoProjeto
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 2<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+| Matrícula  | Aluno        |
+| ---------- | ------------ |
+| 19/0024950 | Arthur Melo  |
+| 18/0105604 | Luis Marques |
+
+## Sobre
+
+O projeto consiste num aplicativo onde o usuário escolhe qual vai ser o melhor caminho para interligar os prédios,ajude o homem aranha a entregar a sua pizza no local desejado.
+O algoritmo faz a validação utilizando Dijkstra.
+
+A apresentação do projeto se encontra [Aqui](/Apresentacao.mp4)
 
 ## Screenshots
+
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+## Instalação
+
+**Linguagem**: JavaScrypt<br>
+**Framework**: React,Native,Expo<br>
+
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+### Requisitos de instalação:
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+    -  Aparelho Android 8.0 ou superior
 
+Para a instalação baste executar o comando:
 
-
-
+    - expo start a
